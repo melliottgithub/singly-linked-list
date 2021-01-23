@@ -95,13 +95,41 @@ class SinglyLinkedList {
   }
   /* 
   -----------------Unshift method------------------
-1. no nodes? then undefined
-2. save current head
-3. save current head to next head
-4. length--
+1. add param
+2. pass argument newNode to the func
+3. if there is no head set the head and tail to be the only one node
+4. 
+5. return the value of the node removed
+ */
+  unshift(val) {
+    var newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.len++;
+    return this;
+  }
+ /* 
+  -----------------Get method------------------
+1. add param
+2. pass argument newNode to the func
+3. if there is no head set the head and tail to be the only one node
+4. 
 5. return the value of the node removed
  */
 
+/* 
+  -----------------Traverse method------------------
+1. add param
+2. pass argument newNode to the func
+3. if there is no head set the head and tail to be the only one node
+4. 
+5. return the value of the node removed
+ */
   // traverse() {
   //   var current = this.head;
   //   while(current) {
